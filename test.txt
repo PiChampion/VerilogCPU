@@ -1,0 +1,23 @@
+@0000 1f05    // LOAD  1F   acc = 00a1 (61)
+@0001 1a02    // OR 1A acc = x00a1 | x0012 = 00b3 (179)
+@0002 0e06    // STORE E
+@0003 0b05    // LOAD 0B acc = 9
+@0004 1E04    // JMPZ 1e (shouldn't jump)
+@0005 0803    // JMP  8
+@0006 0c06    // STORE C 
+@0007 0f03    // JMP F
+@0008 0a01	  // ADD A acc = 6 + 9 = 15
+@0009 0603	  // JMP 6
+@000a 0006    //A data = 6
+@000b 0009    //B data = decimal 9
+@000c 0000    //C data (should have 15)
+@000d 0000    //Value to be read (should be 2685)
+@000e 0000    //should have 00b3 (179)
+@000f 0e05    // LOAD E   acc = 00b3 (179)
+@0010 0c09    // MUL C    acc = 179 * 15 = 2685 (0A7D)
+@0011 0d06    // STORE D
+@0012 1203    // JMP 12
+@0013 0505    // LOAD 05 (shouldn't run)
+@0014 0d06    //STORE D (Shouldn't run)
+@001a 0012   //18
+@001f 00a1	//161
